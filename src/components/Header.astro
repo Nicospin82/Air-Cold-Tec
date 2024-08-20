@@ -1,0 +1,38 @@
+---
+
+---
+<header 
+id="nav-bar"
+    class="fixed flex w-full justify-between px-12 h-28 bg-gray-900">
+    <div>
+        <a href="/">
+            <img  src="/img/icono-web.avif" alt="logo" class="w-[110px] h-[110px]" >
+        </a>
+    </div>
+    <nav class="flex flex-wrap gap-20 items-center">
+        <a href="/">Contactanos</a>
+        <a href="/">Instalaciones realizadas</a>
+        <a href="/">Reparaciones realizadas</a>
+        
+    </nav>
+</header>
+<style>
+    #nav-bar{
+        z-index: 1;
+        animation: blur linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+
+    }
+    @keyframes blur{
+        to{
+            color: whitesmoke;
+            box-shadow: 
+            0px 5px 50px -5px hsla(0, 0%, 100%,0.1),
+            0px 0px 0px 1px hsla(0,0,100%,0.1);
+            background: rgba(0, 0, 0, 0.58);
+            backdrop-filter: blur(10px);
+            
+        }
+    }
+</style>
