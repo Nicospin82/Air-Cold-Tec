@@ -3,26 +3,17 @@
 ---
 <header 
 id="nav-bar"
-    class="fixed flex w-full justify-between px-12 h-28 bg-cyan-800">
+    class="fixed flex w-full justify-between px-12 h-28 bg-indigo-950">
     <div>
-        <a href="/">
-            <img  src="/img/aire7.png" alt="logo" class="w-[110px] h-[110px] ml-10" >
+        <a href="/" class="">
+            <img  src="/img/iconosinfondo.png" alt="logo" class="w-[180px] h-[180px] -mt-8" >
         </a>
     </div>
-    <div>
-        <a href="/">
-            <img src="/img/aire8.png" alt="logo" class="w-[110px] h-[110px] mr-20">
-        </a>
-    </div>
-    <div>
-        <a href="/">
-            <img src="img/heladera1.png" alt="logo" class="w-[95px] h-[100px] mr-80 mt-2">
-        </a>
-    </div>
-    <nav class="flex flex-wrap gap-20 items-center">
-        <a href="/">Contactanos</a>
-        <a href="/">Instalaciones realizadas</a>
-        <a href="/">Reparaciones realizadas</a>
+    
+    <nav class="flex flex-wrap gap-24 p-5 items-center font-semibold italic">
+        <a class="underLine-animated " href="/">Contactanos</a>
+        <a class="underLine-animated" href="/">Nuestros Servicios</a>
+        <a class="underLine-animated" href="/">Nuestros Trabajos</a>
         
     </nav>
 </header>
@@ -45,5 +36,39 @@ id="nav-bar"
             backdrop-filter: blur(10px);
             
         }
+    }
+
+    @keyframes underLineanimaiton{
+        from{
+            width: 0;
+            opacity: 0;
+
+        }
+        to{
+            width: 100%;
+            opacity: 1;
+        }
+    }
+    .underLine-animated {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .underLine-animated::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: rgb(0, 195, 255);
+        width: 100%;
+        transform: scaleX(0);
+        transition: transform 0.6s ease;
+        transform-origin: bottom right;
+    }
+    .underLine-animated:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom right;
     }
 </style>
