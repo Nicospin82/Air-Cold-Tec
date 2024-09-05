@@ -1,17 +1,25 @@
 ---
+import {instalaciones} from '../../data/instalaciones';
+import Carruselinstalaciones from "../Carruselinstalaciones.astro";
+
+const carruselinstalaciones = [...instalaciones, ...instalaciones];
 ---
 
 <section class="pt-32">
         <div class="text-center mb-16">
         
             <h3 class="text-indigo-950  text-6xl font-bold">
-                Nuestros <span class="font-light text-neutral-300">Servicios</span>
+                Nuestros <span class="font-light text-neutral-300">Trabajos</span>
             </h3>
 
         </div>
         <article class="overtflow-hidden">
             <div>
-                
+               {
+                instalaciones.map((instalacion)=> (
+                    <Carruselinstalaciones instalacion ={instalacion}/>
+                ))
+               }
             </div>
 
         </article>
