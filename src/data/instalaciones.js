@@ -8,8 +8,13 @@ export const instalaciones = [
 
     },
 
+
     {
         id: 2,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
 
     },
 
@@ -18,12 +23,16 @@ export const instalaciones = [
         tipo: "Aire Acondicionado tipo split",
         operacion: "instalacion",
         provincia: "Buenos Aires",
-        localidad: "Veronica",
+        localidad: "Pipinas",
 
     },
 
     {
         id: 4,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
 
     },
 
@@ -32,17 +41,41 @@ export const instalaciones = [
         tipo: "Aire Acondicionado tipo split",
         operacion: "instalacion",
         provincia: "Buenos Aires",
-        localidad: "Pipinas",
+        localidad: "Atalaya",
 
     },
 
     {
         id: 6,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
+
+    },
+
+
+    {
+        id: 7,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Magdalena",
 
     },
 
     {
-        id: 7,
+        id: 8,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
+
+    },
+
+
+    {
+        id: 9,
         tipo: "Aire Acondicionado tipo split",
         operacion: "instalacion",
         provincia: "Buenos Aires",
@@ -51,22 +84,14 @@ export const instalaciones = [
     },
 
     {
-        id: 8,
-    },
-
-    {
-        id: 9,
+        id: 10,
         tipo: "Aire Acondicionado tipo split",
         operacion: "instalacion",
         provincia: "Buenos Aires",
-        localidad: "Atalaya",
+        localidad: "Magdalena",
 
     },
 
-    {
-        id: 10,
-
-    },
 
     {
         id: 11,
@@ -79,8 +104,13 @@ export const instalaciones = [
 
     {
         id: 12,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
 
     },
+
 
     {
         id: 13,
@@ -89,104 +119,6 @@ export const instalaciones = [
         provincia: "Buenos Aires",
         localidad: "Magdalena",
 
-    },
-
-    {
-        id: 14,
-    },
-
-    {
-        id: 15,
-        tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
-        provincia: "Buenos Aires",
-        localidad: "Veronica",
-
-    },
-
-    {
-        id: 16,
-    },
-
-    {
-        id: 17,
-        tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
-        provincia: "Buenos Aires",
-        localidad: "Veronica",
-
-    },
-
-    {
-        id: 18,
-    },
-
-    {
-        id: 19,
-        tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
-        provincia: "Buenos Aires",
-        localidad: "Magdalena",
-
-    },
-
-    {
-        id: 20,
-
-    },
-
-    {
-        id: 21,
-        tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
-        provincia: "Buenos Aires",
-        localidad: "Veronica",
-
-    },
-
-    {
-        id: 22,
-
-    },
-
-    {
-        id: 23,
-        tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
-        provincia: "Buenos Aires",
-        localidad: "Veronica",
-
-    },
-
-    {
-        id: 24,
-    },
-
-    {
-        id: 25,
-        tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
-        provincia: "Buenos Aires",
-        localidad: "Magdalena",
-
-    },
-
-    {
-        id: 26,
-    },
-
-    {
-        id: 27,
-        tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
-        provincia: "Buenos Aires",
-        localidad: "Veronica",
-
-
-    },
-
-    {
-        id: 28,
     },
 
 ];

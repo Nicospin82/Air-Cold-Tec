@@ -1,15 +1,59 @@
 ---
+import { instalaciones } from "../data/instalaciones"
+
 const {instalacion} = Astro.props
 ---
 
 <div id="carrusel" class="h-full w-[400px] m-2 flex-shrink-0 cursor-pointer">
-    <div class="rounded-3xl overflow-hiddenc mb-4 h-[250px]">
-            <img class="size-[100%] object-cover absolute top-0 left-0" src=`/img/instalaciones/instalacion-${instalacion.id}` alt="instalacion">
+    <div class="rounded-3xl overflow-hiddenc mb-4 h-[250px] relative img-brillo">
+            <img 
+            class="size-[350px] object-cover absolute top-0 left-0"
+            src={`/img/instalaciones/instalacion${instalacion.id}.png`}
+            alt={instalacion.id}/>
             
     </div>
-    <div>
-        <div>
-            
-        </div>
+    <div class="">
+    
     </div>
 </div>
+
+
+<style>
+    .img-brillo::after{
+        position: absolute;
+        top: 0;
+        left: -30%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3)100%,
+        );
+        transform: skewX(-20deg);
+    }
+    .img-brillo img {
+        trasition: transform 0.5s;
+    }
+
+    .img-brillo:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+
+
+    
+    .img-brillo:hover::after{
+        animation: imgBrillo 1s;
+    }
+    @keyframes imgBrillo{
+        100% {
+            left: 125%;
+        }
+    }
+    
+</style>

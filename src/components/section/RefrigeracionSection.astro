@@ -13,14 +13,31 @@ const carruselinstalaciones = [...instalaciones, ...instalaciones];
             </h3>
 
         </div>
+        
         <article class="overtflow-hidden">
-            <div>
-               {
+            <div class="flex animate-scroll">
+            {
                 instalaciones.map((instalacion)=> (
                     <Carruselinstalaciones instalacion ={instalacion}/>
                 ))
-               }
+            }
             </div>
 
         </article>
 </section>
+<style>
+    @keyframes scroll{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-400px * 5 - 0.5rem *10));
+        }
+    }
+    .animate-scroll{
+        animation: scroll 30s linear infinite;
+    }
+    .animate-scroll:hover{
+        animation-play-state: paused;
+    }
+</style>
