@@ -8,13 +8,13 @@ const carruselinstalaciones = [...instalaciones, ...instalaciones];
 <section class="pt-32">
         <div class="text-center mb-16">
         
-            <h3 class="text-indigo-950  text-6xl font-bold">
-                Nuestros <span class="font-light text-neutral-300">Trabajos</span>
+            <h3 class="text-indigo-950  text-6xl font-semibold">
+                Nuestros <span class="font-light text-indigo-950">Trabajos</span>
             </h3>
 
         </div>
         
-        <article class="overtflow-hidden">
+        <article class="overflow-hidden">
             <div class="flex animate-scroll">
             {
                 instalaciones.map((instalacion)=> (
@@ -31,11 +31,12 @@ const carruselinstalaciones = [...instalaciones, ...instalaciones];
             transform: translateX(0);
         }
         100%{
-            transform: translateX(calc(-400px * 5 - 0.5rem *10));
+            transform: translateX(calc(-950px * 7 - 0.8rem * 16));
+
         }
     }
     .animate-scroll{
-        animation: scroll 30s linear infinite;
+        animation: scroll 40s linear infinite alternate-reverse;
     }
     .animate-scroll:hover{
         animation-play-state: paused;
