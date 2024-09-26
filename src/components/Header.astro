@@ -1,7 +1,7 @@
 ---
-
+const {id} = Astro.props
 ---
-<header 
+<header
 id="nav-bar"
     class="fixed flex w-full justify-between px-12 h-28 bg-indigo-950">
     <div>
@@ -11,9 +11,9 @@ id="nav-bar"
     </div>
     
     <nav class="flex flex-wrap gap-24 p-5 items-center font-semibold italic">
-        <a class="underLine-animated " href="/">Contactanos</a>
-        <a class="underLine-animated" href="/">Nuestros Servicios</a>
-        <a class="underLine-animated" href="/">Nuestros Trabajos</a>
+        <a class="underLine-animated " href="#Contactanos">Contactanos</a>
+        <a class="underLine-animated" href="#Trabajo">Nuestros Trabajos</a>
+        <a class="underLine-animated" href="#Servicios">Nuestros Servicios</a>
         
     </nav>
 </header>

@@ -1,0 +1,42 @@
+---
+const {id} = Astro.props
+---
+
+<section class="mt-10 bg-indigo-950">
+    <div id={id}>
+        <h3 class="aling text-center text-5xl"><span class="font-bold items-center">Nuestros</span> Servicios</h3>
+    </div>
+    
+    <div class="flex flex-col align items-center justify-center bg-sky-800">
+            <div class="">
+                    <img width="390" height="390" src="/public/img/AirePisotecho.png" alt="aire piso techo">
+
+                    <div class="flex flex-col align items-center justify-center mt-0">
+                        <h3 class="text-2xl">Aires Acondicionados Piso Techo</h3>
+                        <p>Brindamos Instalacion, Reparacion <br>y Mantenimiento de dichos equipos</p>
+                    </div>
+            </div>
+    </div>
+
+    <div class="flex flex-col align items-center justify-center bg-sky-900">
+            <div class="">
+                <img width="390" height="390" src="/public/img/AireSplit1.png" alt="aire piso techo">
+
+                <div class="flex flex-col align items-center justify-center mt-0">
+                    <h3 class="text-2xl">Aires Acondicionados Tipo Split</h3>
+                    <p>Brindamos Instalacion, Reparacion <br>y Mantenimiento de dichos equipos</p>
+                </div>
+            </div>
+    </div>
+
+    <div class="flex flex-col align items-center justify-center bg-sky-950">
+        <div class="">
+            <img width="390" height="390" src="/public/img/Ventana.png" alt="aire piso techo">
+
+            <div class="flex flex-col align items-center justify-center mt-0">
+                <h3 class="text-2xl">Aires Acondicionados Ventana o tipo caset</h3>
+                <p>Brindamos Instalacion, Reparacion <br>y Mantenimiento de dichos equipos</p>
+            </div>
+        </div>
+    </div>
+</section>

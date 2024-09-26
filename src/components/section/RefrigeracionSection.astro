@@ -1,11 +1,14 @@
 ---
 import {instalaciones} from '../../data/instalaciones';
 import Carruselinstalaciones from "../Carruselinstalaciones.astro";
+import HeroSection from './HeroSection.astro';
+
 
 const carruselinstalaciones = [...instalaciones, ...instalaciones];
+const {id} = Astro.props
 ---
 
-<section class="pt-32">
+<section id={id} class="pt-32">
         <div class="text-center mb-16">
         
             <h3 class="text-indigo-950  text-6xl font-semibold">

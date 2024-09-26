@@ -1,7 +1,12 @@
 ---
+const {id} = Astro.props 
 ---
 
-<section id="contact" class="flex h-[600px] mt-10 pt-10 brightness-90">
+<section id={id} class="flex h-[600px] mt-10 pt-10 brightness-90">
+    <div class="mt-20">
+        <h3 class="flex flex-col text-slate-800 font-bold text-4xl text-pretty">¡Logramos la Comodidad y Confort que Necesitas!
+        </h3>
+    </div>
     <div class="flex flex-col py-8 px-5 bg-blue-950 rounded-3xl mx-8 w-[600px] h-[500px]">
         <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-center text-white">Contactanos</h2>
             <form action="https://formsubmit.co/0d0d6aab57d3954b8fc605e7aa66878c" method="POST" class="space-y-5">
@@ -14,16 +19,23 @@
                 <div class="sm:col-span-2 relative">
                     <textarea  name="Mensaje" rows="6" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Escribre tu mensaje...."></textarea>
                 </div>
-                <button type="submit" class="flex items-center  py-4 px-16 gap-2 ml-52 text-sm font-serif text-white rounded-3xl p-3 bg-gray-900 border border-slate-400 placeholder-gray-400 hover:text-slate-700 hover:bg-white">
+                <button onclick="return confirmacion()" type="submit" class="flex items-center  py-4 px-16 gap-2 ml-52 text-sm font-serif text-white rounded-3xl p-3 bg-gray-900 border border-slate-400 placeholder-gray-400 hover:text-slate-700 hover:bg-white">
                     Enviar 
                 </button>
                 <input type="hidden" name="_next" value="http://aircoldtec.netlify.app">
                 <input type="hidden" name="_captcha" value="false">
+
+                <script>
+                    function confirmacion() {
+                        var respuesta=confirm("Mensaje enviado con exito!");
+                        if(respuesta==true){
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }
+                </script>
+
             </form>
     </div>
-    <div class="flex flex-col mt-20">
-        <h3 class=" text-slate-800 font-bold text-4xl text-pretty">¡Logramos la Comodidad y Confort que Necesitas!
-        </h3>
-    </div>
-    
 </section>
