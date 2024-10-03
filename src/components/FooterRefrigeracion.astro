@@ -2,18 +2,13 @@
 const {id} = Astro.props 
 ---
 
-<section id={id} class="flex flex-col h-[600px] mt-10 pt-10 brightness-90">
+<section id={id} class="flex h-[600px] mt-10 pt-10 brightness-90">
 
-
-    <div class="flex mt-20 align items-center justify-center">
-        <h3 class="flex text-sky-950 font-bold text-4xl text-pretty">El clima ideal está a solo una llamada! déjanos cuidar de tu aire acondicionado
-        </h3>
-    </div>
     <div class="flex flex-col mt-20 py-8 px-5 bg-blue-950 rounded-3xl mx-8 w-[600px] h-[500px]">
         <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-center text-white">Contactanos</h2>
             <form action="https://formsubmit.co/0d0d6aab57d3954b8fc605e7aa66878c" method="POST" class="space-y-5">
                 <div class="relative">
-                    <input type="email" name="email"  class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Ingresesu@gmail.com" required>
+                    <input type="email" name="email"  class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="IngreseSu@gmail.com" required>
                 </div>
                 <div class="relative">
                     <input type="text" name="nombre"  class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Nombre" required>
@@ -21,12 +16,22 @@ const {id} = Astro.props
                 <div class="sm:col-span-2 relative">
                     <textarea  name="Mensaje" rows="6" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Escribre tu mensaje...."></textarea>
                 </div>
-                <button onclick="return confirmacion()" type="submit" class="flex items-center  py-4 px-16 gap-2 ml-52 text-sm font-serif text-white rounded-3xl p-3 bg-gray-900 border border-slate-400 placeholder-gray-400 hover:text-slate-700 hover:bg-white">
+                <button type="submit" class="flex items-center  py-5 px-16 gap-2 ml-52 text-sm font-serif text-white rounded-3xl p-3 bg-gray-900 border border-slate-400 placeholder-gray-400 hover:text-slate-700 hover:bg-white">
                     Enviar 
                 </button>
                 <input type="hidden" name="_next" value="http://aircoldtec.netlify.app">
                 <input type="hidden" name="_captcha" value="false">
-
             </form>
+            <br>
+            
+    </div>
+    <div class="flex flex-col">
+    <h3 class="mt-20 ml-10 text-sky-950 font-extrabold text-4xl text-pretty">El clima ideal está a solo una llamada! <br> Déjanos cuidar de tu aire acondicionado
+    </h3>
+
+    <a class="flex items-center justify-center mt-20 ml-10 mr-auto py-2 text-sm font-serif text-white rounded-3xl p-16 bg-green-900 border border-green-400 placeholder-gray-400 hover:text-slate-700 hover:bg-gray-200" href="https://wa.me/+542221402352?text=Hola, realiza tu consulta! a la brevedad seras respondido" target="_blank">
+        <img class="w-[50px] h-[50px]" src="/img/logowhatsapp.png" alt="logo">Whatsapp
+    </a>
+    <h3 class="mt-10 ml-10 text-sky-950 font-bold text-2xl">Proximámente mas redes sociales...</h3>
     </div>
 </section>
