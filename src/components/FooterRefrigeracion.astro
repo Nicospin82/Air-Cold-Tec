@@ -1,12 +1,13 @@
 ---
-const {id} = Astro.props 
+const {id} = Astro.props
+//AlerComponent.astro
 ---
 
 <section id={id} class="flex h-[600px] mt-10 pt-10 brightness-90">
 
     <div class="flex flex-col mt-20 py-8 px-5 bg-blue-950 rounded-3xl mx-8 w-[600px] h-[500px]">
         <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-center text-white">Contactanos</h2>
-            <form action="https://formsubmit.co/0d0d6aab57d3954b8fc605e7aa66878c" method="POST" class="space-y-5">
+            <form action="https://formsubmit.co/0d0d6aab57d3954b8fc605e7aa66878c" method="POST" class="space-y-5 ">
                 <div class="relative">
                     <input type="email" name="email"  class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="IngreseSu@gmail.com" required>
                 </div>
@@ -16,10 +17,10 @@ const {id} = Astro.props
                 <div class="sm:col-span-2 relative">
                     <textarea  name="Mensaje" rows="6" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Escribre tu mensaje...."></textarea>
                 </div>
-                <button type="submit" class="flex items-center  py-5 px-16 gap-2 ml-52 text-sm font-serif text-white rounded-3xl p-3 bg-gray-900 border border-slate-400 placeholder-gray-400 hover:text-slate-700 hover:bg-white">
-                    Enviar 
+                <button id="Mensaje" type="submit" class="flex items-center py-6 px-16 gap-2 ml-52 text-sm font-serif text-white rounded-3xl p-3 bg-gray-900 border border-slate-400 placeholder-gray-400 hover:text-slate-700 hover:bg-white">
+                    Enviar
                 </button>
-                <input type="hidden" name="_next" value="http://aircoldtec.netlify.app">
+                <input type="hidden" name="_next" value="http://localhost:4321/#Contactanos">
                 <input type="hidden" name="_captcha" value="false">
             </form>
             <br>
@@ -35,3 +36,10 @@ const {id} = Astro.props
     <h3 class="mt-10 ml-10 text-sky-950 font-bold text-2xl">Proximámente mas redes sociales...</h3>
     </div>
 </section>
+
+<script>
+    document.getElementById("Mensaje").addEventListener("click", function() {
+        alert("Mensaje enviado con exito, a la brevedad seras respondido. Gracias!");
+    });
+
+</script>
