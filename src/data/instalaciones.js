@@ -98,7 +98,7 @@ export const instalaciones = [
         tipo: "Aire Acondicionado tipo split",
         operacion: "instalacion",
         provincia: "Buenos Aires",
-        localidad: "Veronica",
+        localidad: "Magdalena",
 
     },
 
@@ -177,6 +177,15 @@ export const instalaciones = [
 
     {
         id: 20,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
+
+    },
+
+    {
+        id: 21,
         tipo: "Aire Acondicionado tipo split",
         operacion: "instalacion",
         provincia: "Buenos Aires",
