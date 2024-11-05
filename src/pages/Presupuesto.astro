@@ -9,25 +9,29 @@ import Layout from "../layouts/Layout.astro"
             <h2 class="mb-6 text-3xl tracking-tight font-extrabold text-center text-white">Presupuestos Personalizados</h2>
             <form action="https://formsubmit.co/0d0d6aab57d3954b8fc605e7aa66878c" method="POST" class="space-y-4">
                 <div class="relative">
-                    <input type="email" name="email" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="IngreseSu@gmail.com..." required>
+                    <input type="email" name="email" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" placeholder="IngreseSu@gmail.com..." required>
                 </div>
                 <div class="relative">
-                    <input type="text" name="nombre" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Nombre y Apellido..." required>
+                    <input type="text" name="nombre" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" placeholder="Nombre y Apellido..." required>
                 </div>
                 <div class="relative">
-                    <textarea name="marca_frigorias" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Marca y Frigorías del Equipo..." required></textarea>
+                    <textarea name="marca_frigorias" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" placeholder="Marca y Frigorías del Equipo..." required></textarea>
                 </div>
                 <div class="relative">
-                    <textarea name="localidad" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Localidad a colocar el Equipo..." required></textarea>
+                    <textarea name="localidad" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" placeholder="Localidad a colocar el Equipo..." required></textarea>
                 </div>
                 <div class="relative">
-                    <textarea name="ubicacion_interior" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Ubicación de Unidad Interior..." required></textarea>
+                    <textarea name="ubicacion_interior" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" placeholder="Ubicación de Unidad Interior..." required></textarea>
                 </div>
                 <div class="relative">
-                    <textarea name="ubicacion_exterior" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Ubicación de Unidad Exterior..." required></textarea>
+                    <textarea name="ubicacion_exterior" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" placeholder="Ubicación de Unidad Exterior..." required></textarea>
                 </div>
                 <div class="relative">
-                    <textarea name="tipo_urgencia" rows="1" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Tipo de Urgencia del Trabajo..." required></textarea>
+                    <label for="foto" class="text-bold ml-14 text-white">Adjuntar Foto de las ubicaciones(opcional)</label>
+                    <input type="file" name="foto" id="foto" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" accept="image/*">
+                </div>
+                <div class="relative">
+                    <textarea name="tipo_urgencia" rows="1" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-200 placeholder-gray-300 text-white" placeholder="Tipo de Urgencia del Trabajo..." required></textarea>
                 </div>
                 <button id="Mensaje" type="submit" class="flex items-center py-3 px-8 mx-auto text-sm font-bold text-white rounded-3xl bg-cyan-500 border border-slate-200 placeholder-gray-600 hover:text-black hover:bg-white">
                     Enviar
