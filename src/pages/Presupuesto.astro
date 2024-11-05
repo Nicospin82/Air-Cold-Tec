@@ -1,8 +1,81 @@
 ---
-import PresupuestoSection from "../components/section/PresupuestoSection.astro"
 import Layout from "../layouts/Layout.astro"
+//AlerComponent.astro
 ---
 
 <Layout title="Air Cold Tec" description='tecnico en refrigeracion'>
-    <PresupuestoSection id="Presupuesto.astro"/>
+    <section class="flex bg-center bg-cover mt-0 pt-24 brightness-75" style="background-image: url('/img/fondo2.jpg')">
+        <div class="flex flex-col mx-auto mt-10 mb-10 py-6 px-6 bg-blue-950 rounded-3xl w-full max-w-md">
+            <h2 class="mb-6 text-3xl tracking-tight font-extrabold text-center text-white">Presupuestos Personalizados</h2>
+            <form action="https://formsubmit.co/0d0d6aab57d3954b8fc605e7aa66878c" method="POST" class="space-y-4">
+                <div class="relative">
+                    <input type="email" name="email" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="IngreseSu@gmail.com..." required>
+                </div>
+                <div class="relative">
+                    <input type="text" name="nombre" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Nombre y Apellido..." required>
+                </div>
+                <div class="relative">
+                    <textarea name="marca_frigorias" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Marca y Frigorías del Equipo..."></textarea>
+                </div>
+                <div class="relative">
+                    <textarea name="localidad" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Localidad a colocar el Equipo..."></textarea>
+                </div>
+                <div class="relative">
+                    <textarea name="ubicacion_interior" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Ubicación de Unidad Interior..."></textarea>
+                </div>
+                <div class="relative">
+                    <textarea name="ubicacion_exterior" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Ubicación de Unidad Exterior..."></textarea>
+                </div>
+                <div class="relative">
+                    <textarea name="tipo_urgencia" rows="1" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Tipo de Urgencia del Trabajo..."></textarea>
+                </div>
+                <button type="submit" class="flex items-center py-3 px-8 mx-auto text-sm font-bold text-white rounded-3xl bg-cyan-500 border border-slate-200 placeholder-gray-600 hover:text-black hover:bg-white">
+                    Enviar
+                </button>
+                <input type="hidden" name="_next" value="https://aircoldtec.netlify.app/Presupuesto">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </section>         
+    
+    <script>
+        document.getElementById("Mensaje").addEventListener("click", function() {
+            alert("Mensaje enviado con exito, a la brevedad seras respondido,Para regresar hace click en el LOGO. Gracias!");
+        });
+    </script>
 </Layout>
+
+<!--<section class="flex bg-center bg-cover mt-0 pt-24 brightness-75" style="background-image: url('/img/fondo2.jpg')">
+    
+        <div class="flex flex-col ml-[480px] mt-20 mb-20 py-9 px-9 bg-blue-950 rounded-3xl mx-8 w-[600px] h-[800px]">
+            <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-center text-white">Presupuestos Personalizados</h2>
+                <form action="https://formsubmit.co/0d0d6aab57d3954b8fc605e7aa66878c" method="POST" class="space-y-5 ">
+                    <div class="relative">
+                        <input type="email" name="email"  class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="IngreseSu@gmail.com..." required>
+                    </div>
+                    <div class="relative">
+                        <input type="text" name="nombre"  class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Nombre y Apellido..." required>
+                    </div>
+                    <div class="relative">
+                        <textarea  name="Mensaje" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Marca y Frigorias del Equipo..."></textarea>
+                    </div>
+                    <div class="relative">
+                        <textarea  name="Mensaje" rows="2" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Localidad a colocar el Equipo..."></textarea>
+                    </div>
+                    <div class="relative">
+                        <textarea  name="Mensaje" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Ubicacion de Unidad Interior..."></textarea>
+                    </div>
+                    <div class="relative">
+                        <textarea  name="Mensaje" rows="3" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Ubicación de Unidad Exterior..."></textarea>
+                    </div>
+                    <div class="relative">
+                        <textarea  name="Mensaje" rows="1" class="p-3 w-full text-sm rounded-2xl bg-transparent border border-slate-300 placeholder-gray-300 text-white" placeholder="Tipo de Urgencia del Trabajo..."></textarea>
+                    </div>
+                    <button id="Mensaje" type="submit" class="flex items-center py-6 px-16 ml-48 text-sm font-bold text-white rounded-3xl p-3 bg-cyan-500 border border-slate-200 placeholder-gray-600 hover:text-black hover:bg-white">
+                        Enviar
+                    </button>
+                    <input type="hidden" name="_next" value="https://aircoldtec.netlify.app/Presupuesto">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+        </div>  
+    </section> -->
