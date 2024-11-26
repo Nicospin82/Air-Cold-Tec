@@ -10,9 +10,10 @@ const {id} = Astro.props
     </div>
 
     <article class="mt-12">
-        <div class="flex flex-col md:flex-row bg-sky-950 mb-2">
+        <!-- Sección 1: Aires Acondicionados Piso-Techo -->
+        <div class="flex flex-col md:flex-row bg-sky-950 mb-2" id="section1">
             <img class="mx-auto md:ml-20 w-[90%] md:w-[400px] h-auto" src="/img/AirePisotecho.png" alt="aire piso techo">
-            <div class="mr-6 md:mr-36 mt-6 md:mt-28 text-center md:text-left xl:mt-28 lg:mt-28">
+            <div id="text1" class="mr-6 md:mr-36 mt-6 md:mt-28 text-center md:text-left xl:mt-28 lg:mt-28 opacity-0 transform translate-x-[-100%] transition-all duration-1000 ease-out">
                 <h3 class="font-serif text-2xl">Aires Acondicionados Piso-Techo</h3>
                 <p class="ml-6">
                     . Instalación de equipos nuevos <br>
@@ -22,9 +23,10 @@ const {id} = Astro.props
                 </p>
             </div>
         </div>
-
-        <div class="flex flex-col md:flex-row bg-sky-900 mb-2">
-            <div class="mt-4 md:mt-28 text-center md:text-left md:ml-36 xl:mt-28 lg:mt-28">
+    
+        <!-- Sección 2: Aires Acondicionados Split -->
+        <div class="flex flex-col md:flex-row bg-sky-900 mb-2" id="section2">
+            <div id="text2" class="mt-4 md:mt-28 text-center md:text-left md:ml-36 xl:mt-28 lg:mt-28 opacity-0 transform translate-x-[-100%] transition-all duration-1000 ease-out">
                 <h3 class="font-serif text-2xl">Aires Acondicionados Split</h3>
                 <p class="ml-6">
                     . Instalación de equipos nuevos <br>
@@ -35,10 +37,11 @@ const {id} = Astro.props
             </div>
             <img class="mx-auto md:mr-20 w-[90%] md:w-[400px] h-auto" src="/img/AireSplit2.png" alt="aire split">
         </div>
-
-        <div class="flex flex-col md:flex-row bg-sky-800 mb-0">
+    
+        <!-- Sección 3: Aires Acondicionados Portátiles -->
+        <div class="flex flex-col md:flex-row bg-sky-800 mb-0" id="section3">
             <img class="mx-auto md:ml-10 w-[90%] md:w-[400px] h-auto" src="/img/Portatil.png" alt="aire portátil">
-            <div class="mt-4 md:mt-28 md:mr-36 text-center md:text-left xl:mt-28 lg:mt-28">
+            <div id="text3" class="mt-4 md:mt-28 md:mr-36 text-center md:text-left xl:mt-28 lg:mt-28 opacity-0 transform translate-x-[-100%] transition-all duration-1000 ease-out">
                 <h3 class="font-serif text-2xl">Aires Acondicionados Portátiles</h3>
                 <p class="ml-6">
                     . Instalación de equipos nuevos <br>
@@ -49,5 +52,38 @@ const {id} = Astro.props
             </div>
         </div>
     </article>
+    
+    
+    
 </section>
 
+<script>
+    // Función para mostrar el texto cuando se hace scroll
+    document.addEventListener('scroll', function () {
+        // Secciones que se van a observar
+        const sections = [
+            { id: 'section1', textId: 'text1' },
+            { id: 'section2', textId: 'text2' },
+            { id: 'section3', textId: 'text3' }
+        ];
+
+        sections.forEach(section => {
+            const sectionElement = document.getElementById(section.id);
+            const textElement = document.getElementById(section.textId);
+
+            // Verificamos si la sección está visible en la pantalla
+            const position = sectionElement.getBoundingClientRect();
+
+            // Si la sección está dentro del área visible del navegador
+            if (position.top <= window.innerHeight && position.bottom >= 0) {
+                // Hacemos visible el texto
+                textElement.classList.remove('opacity-0', 'translate-x-[-100%]');
+                textElement.classList.add('opacity-100', 'translate-x-0');
+            } else {
+                // Si la sección no está en vista, lo ocultamos
+                textElement.classList.remove('opacity-100', 'translate-x-0');
+                textElement.classList.add('opacity-0', 'translate-x-[-100%]');
+            }
+        });
+    });
+</script>

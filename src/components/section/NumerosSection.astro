@@ -3,7 +3,8 @@
 ---
 
 <section class="flex flex-col justify-center bg-[#1a284adc] h-auto w-full mt-10 items-center p-4">
-    <div class="text-center text-4xl animate-fade animation-infinite animate-duration-[8s] animate-delay-[3s]">
+    <!-- Sección con la frase -->
+    <div id="frase" class="text-center text-4xl opacity-0 transform translate-x-[-100%] transition-all duration-1000 ease-out">
         <h2 class="font-serif">
             Trabajamos de manera Honesta, Responsable y con Garantía
         </h2>
@@ -13,9 +14,24 @@
     </div>
 </section>
 
-<!--<section class="flex flex-col justify-center bg-[#1a284adc] h-[150px] w-full mt-10 items-center">
-    <div class="text-4xl animate-fade animation-infinite animate-duration-[8s] animate-delay-[3s]">
-        <h2 class="font-serif">Trabajamos de manera Honesta, Responsable y con Garantía <br><h5 class="ml-28 mt-2 font-serif text-2xl">¡Mantenemos el aire puro y fresco porque cada día merece ser perfecto!</h5></h2>
-    </div>
-</section> -->
 
+
+<script>
+    document.addEventListener('scroll', function() {
+    const fraseElement = document.getElementById('frase');
+    
+    // Detecta la posición de la sección en la pantalla
+    const position = fraseElement.getBoundingClientRect();
+    
+    // Si la sección está en la vista del usuario
+    if (position.top <= window.innerHeight && position.bottom >= 0) {
+        // Aparece la sección con animación de deslizamiento
+        fraseElement.classList.remove('opacity-0', 'translate-x-[-100%]');
+        fraseElement.classList.add('opacity-100', 'translate-x-0');
+    } else {
+        // Si la sección ya no está en la vista, la ocultamos nuevamente
+        fraseElement.classList.remove('opacity-100', 'translate-x-0');
+        fraseElement.classList.add('opacity-0', 'translate-x-[-100%]');
+    }
+});
+</script>
