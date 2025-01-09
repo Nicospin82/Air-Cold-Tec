@@ -19,13 +19,14 @@ const {instalacion} = Astro.props;
 
 
 <style>
+
     .img-brillo::after{
         position: absolute;
         top: 0;
         left: -30%;
         z-index: 2;
         display: block;
-        content: '';
+        content: "";
         width: 50%;
         height: 100%;
         background: linear-gradient(
@@ -34,7 +35,7 @@ const {instalacion} = Astro.props;
             rgba(255, 255, 255, 0.3)100%,
         );
         transform: skewX(-20deg);
-    }
+    };
     .img-brillo img {
         trasition: transform 0.5s;
     }

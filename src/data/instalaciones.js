@@ -178,7 +178,7 @@ export const instalaciones = [
     {
         id: 20,
         tipo: "Aire Acondicionado tipo split",
-        operacion: "instalacion",
+        operacion: "limpieza",
         provincia: "Buenos Aires",
         localidad: "Veronica",
 
@@ -186,6 +186,42 @@ export const instalaciones = [
 
     {
         id: 21,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
+
+    },
+
+    {
+        id: 22,
+        tipo: "Aire acondicionado split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
+
+    },
+
+    {
+        id: 23,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Veronica",
+
+    },
+
+    {
+        id: 24,
+        tipo: "Aire Acondicionado tipo split",
+        operacion: "instalacion",
+        provincia: "Buenos Aires",
+        localidad: "Punta indio",
+
+    },
+
+    {
+        id: 25,
         tipo: "Aire Acondicionado tipo split",
         operacion: "instalacion",
         provincia: "Buenos Aires",
