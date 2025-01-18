@@ -1,5 +1,6 @@
 ---
 import {instalaciones} from '../../data/instalaciones';
+import { instalaciones2 } from '../../data/instalaciones2';
 import Carruselinstalaciones from "../Carruselinstalaciones.astro";
 import HeroSection from './HeroSection.astro';
 
@@ -16,7 +17,8 @@ const {id} = Astro.props
             </h3>
 
         </div>
-        
+
+        <!--primer carrusel -->
         <article class="overflow-hidden">
             <div class="flex animate-scroll">
             {
@@ -25,8 +27,19 @@ const {id} = Astro.props
                 ))
             }
             </div>
-
         </article>
+
+        <!--segundo carrusel--->
+        <article class="Carrusel-2 overflow-hidden">
+            <div class="flex animate-scroll">
+            {
+                instalaciones2.map((instalacion)=> (
+                    <Carruselinstalaciones instalacion ={instalacion}/>
+                ))
+            }
+            </div>
+        </article>
+
 </section>
 <style>
     @keyframes scroll{
@@ -34,14 +47,33 @@ const {id} = Astro.props
             transform: translateX(0);
         }
         100%{
-            transform: translateX(calc(-650px * 14 - 0.8rem * 10));
+            transform: translateX(calc(-760px * 5 - 0.5rem * 10));
 
         }
     }
     .animate-scroll{
-        animation: scroll 40s linear infinite alternate-reverse;
+        animation: scroll 20s linear infinite alternate-reverse;
     }
     .animate-scroll:hover{
         animation-play-state: paused;
     }
+
+
+@keyframes scroll-2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-800px * 3 - 0.5rem * 6)); /* Distancia menor (3 elementos) */
+    }
+}
+
+.Carrusel-2 .animate-scroll {
+    animation: scroll 22s linear infinite alternate-reverse; /* Cambié la duración para hacerlo más lento */
+}
+
+    .Carrusel-2 .animate-scroll:hover{
+        animation-play-state: paused;
+    }
 </style>
+
